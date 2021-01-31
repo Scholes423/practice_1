@@ -21,7 +21,7 @@ print(scores)
 dfc = pd.read_csv("car_complain.csv", encoding="utf-8")
 #Step2，数据预处理
 dfc["brand"] = dfc["brand"].apply(lambda x:x.replace("-", ""))
-#拆分problem类型 => 多个字段,统计单行抱怨中所含的问题点个数
+#拆分problem类型 => 多个字段,这里不太懂分成多字段的意思和操作，统计单行抱怨中所含的问题点个数
 dfc["prob_count"] = dfc["problem"].apply(lambda x: len(x.split(",")) - 1)
 #Step3，数据统计
 #对数据进行探索：品牌投诉总数，车型投诉总数
